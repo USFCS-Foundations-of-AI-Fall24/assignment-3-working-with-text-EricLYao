@@ -25,5 +25,10 @@ def euclidean_distance(d1, d2) :
 
 ## You implement this.
 def cosine_similarity(d1,d2) :
-    pass
-
+    union = d1.tokens.keys() & d2.tokens.keys()
+    numerator = sum([(d1.tokens[item] * d2.tokens[item]) for item in union])
+    d1denom = sqrt(sum([d1.tokens[item] ** 2 for item in d1.tokens.keys()]))
+    d2denom = sqrt(sum([d2.tokens[item] ** 2 for item in d2.tokens.keys()]))
+    if d1denom == 0 or d2denom == 0:
+        return 0
+    return numerator / (d1denom * d2denom)
