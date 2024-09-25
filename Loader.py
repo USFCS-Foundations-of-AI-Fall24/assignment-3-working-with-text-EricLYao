@@ -63,7 +63,7 @@ def compute_homogeneity(list_of_clusters, list_of_classes) :
 # result = k_means(2, ['pos','neg'], positive_docs + negative_docs)
 # compute_completeness(result, ['pos','neg'])
 
-def compute_completeness(list_of_clusters, list_of_classes)
+def compute_completeness(list_of_clusters, list_of_classes) :
     # clist will be the homogeneity for each cluster.
     clist = []
 
